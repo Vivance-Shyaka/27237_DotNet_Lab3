@@ -48,15 +48,11 @@ public partial class LoginForm : Form
             dashboard = new AdminDashboardForm();
         else if (user.Role == Roles.Instructor)
             dashboard = new InstructorDashboardForm();
+        else if (user.Role == Roles.Learner)
+            dashboard = new LearnerDashboardForm();
 
         if (dashboard == null)
-        {
-            // The Learner dashboard comes in Step 9
-            MessageBox.Show("Welcome, " + user.FullName + " (" + user.Role + ")\n" +
-                            "The screens for your role are coming in the next steps.",
-                "Login successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
             return;
-        }
 
         Hide();
         using (dashboard)

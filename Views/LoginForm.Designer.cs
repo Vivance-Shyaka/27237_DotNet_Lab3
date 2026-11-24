@@ -54,6 +54,7 @@
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(275, 30);
             txtUsername.TabIndex = 1;
+            txtUsername.Text = "d";
             // 
             // chkShowPassword
             // 
