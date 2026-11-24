@@ -32,6 +32,7 @@
             btnCourses = new Button();
             lblWelcome = new Label();
             btnLogout = new Button();
+            btnQuizzes = new Button();
             SuspendLayout();
             // 
             // lblTitle
@@ -73,11 +74,21 @@
             btnLogout.Text = "Logout";
             btnLogout.UseVisualStyleBackColor = true;
             // 
+            // btnQuizzes
+            // 
+            btnQuizzes.Location = new Point(330, 150);
+            btnQuizzes.Name = "btnQuizzes";
+            btnQuizzes.Size = new Size(260, 70);
+            btnQuizzes.TabIndex = 4;
+            btnQuizzes.Text = "My quizzes";
+            btnQuizzes.UseVisualStyleBackColor = true;
+            // 
             // InstructorDashboardForm
             // 
             AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(642, 393);
+            Controls.Add(btnQuizzes);
             Controls.Add(btnLogout);
             Controls.Add(lblWelcome);
             Controls.Add(btnCourses);
@@ -88,7 +99,7 @@
             Name = "InstructorDashboardForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "WLAMS - Instructor";
-         //   Load += InstructorDashboardForm_Load;
+       //     Load += InstructorDashboardForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -99,5 +110,6 @@
         private Button btnCourses;
         private Label lblWelcome;
         private Button btnLogout;
+        private Button btnQuizzes;
     }
 }

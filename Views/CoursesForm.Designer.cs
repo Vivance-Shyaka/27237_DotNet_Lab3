@@ -171,9 +171,8 @@
             lblStatus.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblStatus.Location = new Point(20, 350);
             lblStatus.Name = "lblStatus";
-            lblStatus.Size = new Size(62, 23);
+            lblStatus.Size = new Size(0, 23);
             lblStatus.TabIndex = 12;
-            lblStatus.Text = "empty";
             // 
             // btnDelete
             // 
@@ -296,7 +295,6 @@
             Name = "CoursesForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "My courses";
-          //  Load += CoursesForm_Load;
             ((System.ComponentModel.ISupportInitialize)dgvCourses).EndInit();
             ResumeLayout(false);
             PerformLayout();

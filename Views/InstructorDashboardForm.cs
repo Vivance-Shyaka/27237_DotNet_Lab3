@@ -10,6 +10,7 @@ public partial class InstructorDashboardForm : Form
         lblWelcome.Text = "Welcome, " + Session.CurrentUser?.FullName;
 
         btnCourses.Click += (s, e) => OpenChild(new CoursesForm());
+        btnQuizzes.Click += (s, e) => OpenChild(new QuizzesForm());
         btnLogout.Click += (s, e) => Close();
     }
 
