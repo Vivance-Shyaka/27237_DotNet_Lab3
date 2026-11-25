@@ -37,6 +37,7 @@
             txtContent = new TextBox();
             btnToggle = new Button();
             btnNext = new Button();
+            btnQuizzes = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvLessons).BeginInit();
             SuspendLayout();
             // 
@@ -123,11 +124,21 @@
             btnNext.Text = "Next lesson";
             btnNext.UseVisualStyleBackColor = true;
             // 
+            // btnQuizzes
+            // 
+            btnQuizzes.Location = new Point(916, 12);
+            btnQuizzes.Name = "btnQuizzes";
+            btnQuizzes.Size = new Size(260, 45);
+            btnQuizzes.TabIndex = 9;
+            btnQuizzes.Text = "Quizzes of this course";
+            btnQuizzes.UseVisualStyleBackColor = true;
+            // 
             // CourseStudyForm
             // 
             AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1202, 733);
+            Controls.Add(btnQuizzes);
             Controls.Add(btnNext);
             Controls.Add(btnToggle);
             Controls.Add(txtContent);
@@ -143,7 +154,7 @@
             Name = "CourseStudyForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Study";
-           // Load += CourseStudyForm_Load;
+          //  Load += CourseStudyForm_Load;
             ((System.ComponentModel.ISupportInitialize)dgvLessons).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -160,5 +171,6 @@
         private TextBox txtContent;
         private Button btnToggle;
         private Button btnNext;
+        private Button btnQuizzes;
     }
 }

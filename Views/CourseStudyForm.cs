@@ -34,7 +34,25 @@ public partial class CourseStudyForm : Form
         dgvLessons.CellClick += (s, e) => { if (e.RowIndex >= 0) ShowLesson(e.RowIndex); };
         btnToggle.Click += btnToggle_Click;
         btnNext.Click += btnNext_Click;
-        btnBack.Click += (s, e) => Close();
+
+        // ----- Back button: closes the window, also with the Esc key -----
+        btnBack.DialogResult = DialogResult.Cancel;
+        CancelButton = btnBack;
+        btnBack.BringToFront();
+
+        // ----- Quizzes button (remove this block if you have no btnQuizzes) -----
+        btnQuizzes.Click += (s, e) =>
+        {
+            using (var form = new CourseQuizzesForm(_courseId, lblCourse.Text))
+                form.ShowDialog();
+        };
+        // ------------------------------------------------------------------------
+
+        // make sure the window fits on the screen
+        Rectangle area = Screen.FromControl(this).WorkingArea;
+        if (Height > area.Height)
+            Height = area.Height - 20;
+        AutoScroll = true;
     }
 
     private bool TryRun(Action action, string title)
@@ -51,6 +69,11 @@ public partial class CourseStudyForm : Form
         catch (MySqlException ex)
         {
             MessageBox.Show("Database error: " + ex.Message, title,
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show("Unexpected error: " + ex.Message, title,
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         return false;

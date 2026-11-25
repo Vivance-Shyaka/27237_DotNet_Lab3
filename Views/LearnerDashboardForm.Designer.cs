@@ -34,6 +34,7 @@
             btnBrowse = new Button();
             btnMyCourses = new Button();
             btnLogout = new Button();
+            btnResults = new Button();
             SuspendLayout();
             // 
             // lblTitle
@@ -88,18 +89,28 @@
             // 
             // btnLogout
             // 
-            btnLogout.Location = new Point(40, 300);
+            btnLogout.Location = new Point(330, 255);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(260, 45);
+            btnLogout.Size = new Size(260, 70);
             btnLogout.TabIndex = 5;
             btnLogout.Text = "Logout";
             btnLogout.UseVisualStyleBackColor = true;
+            // 
+            // btnResults
+            // 
+            btnResults.Location = new Point(40, 255);
+            btnResults.Name = "btnResults";
+            btnResults.Size = new Size(260, 70);
+            btnResults.TabIndex = 6;
+            btnResults.Text = "My quiz results";
+            btnResults.UseVisualStyleBackColor = true;
             // 
             // LearnerDashboardForm
             // 
             AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(642, 393);
+            Controls.Add(btnResults);
             Controls.Add(btnLogout);
             Controls.Add(btnMyCourses);
             Controls.Add(btnBrowse);
@@ -125,5 +136,6 @@
         private Button btnBrowse;
         private Button btnMyCourses;
         private Button btnLogout;
+        private Button btnResults;
     }
 }

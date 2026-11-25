@@ -18,6 +18,7 @@ public partial class LearnerDashboardForm : Form
 
         btnBrowse.Click += (s, e) => OpenChild(new CatalogueForm());
         btnMyCourses.Click += (s, e) => OpenChild(new MyCoursesForm());
+        btnResults.Click += (s, e) => OpenChild(new MyResultsForm());
         btnLogout.Click += (s, e) => Close();
     }
 
